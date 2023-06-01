@@ -1,0 +1,49 @@
+Now suppose you are working in an XYZ organization as a C++ developer. Currently, the HR department of the organization is recruiting people for a vacant position in the organization. Software Team of the Organization assigns you the task of developing an application to keep track of the number and records of applicants who have applied for the post. Now keeping in mind that organization has limited number of computational resources available to them, being a C++ developer which type of memory allocation technique (Static or Dynamic) you will be using in this case? Justify your answer with valid reason in either case.
+
+In my opinion, following should be the static and dynamic data types. The explaination is shown in the corresponding comments.
+
+class Applicant
+{
+char name [40];
+char highestQualification [40];
+int weightage;
+int latestExperience;
+int domicile;
+int id;
+};
+struct Qualification
+{
+char name [40];
+int marks;
+};
+struct Experience
+{
+char name [40];
+int years;
+};
+class cumulativeWeightage
+{
+
+	Qualification *qlf;// should be dynamic because we don’t know the qualification for each candidate at the beginning, it is different for each
+	int numOfDegrees;
+	Experience *exp;// should be dynamic because we don’t know the experience for each candidate at the beginning, it is different for each
+	int numOfYears;
+	//fill out the qualification for all degrees a candidate has
+	qlf = (Qualification *) malloc(numOfDegrees * sizeof(Qualification)); 
+	//fill out the experience for all jobs a candidate have
+	exp = (Experience *) malloc(numOfYears * sizeof(Experience));
+	//a member function
+	int calcWeightage (Qualification *qlf, Experience *exp);
+}
+int cumulativeWeightage :: calcWeightage(Qualification *qlf, Experience *exp)
+{
+	//make a formula to calculate a cumulative weightage based on candidate
+	//overall qualification and overall jobs
+	weightage = degree1x0.8+degree2x0.3+...+experience1x0.8+experience2x0.3+...
+	return(weightage);
+}
+
+Applicant *candidate;
+int num;//number of applicants
+candidate = (Applicant *) malloc(num * sizeof(Applicant));
+// fill in the candidates on the go (dynamically) and calculate the weightage based on qualification and experience dynamically input.

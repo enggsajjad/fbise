@@ -1,0 +1,4 @@
+id|Name|Qty|LocPrice|Total
+1|oil|2|2|2|4
+5|rooti|4|4|4|16
+3|vegetables|3|1|2|6

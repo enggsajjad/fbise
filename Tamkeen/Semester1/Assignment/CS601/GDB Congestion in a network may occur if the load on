@@ -1,0 +1,17 @@
+  Congestion in a network may occur if the load on the network is greater than the capacity of the network. The congestion control scheme tries to bring the network back to an operating state, while a congestion avoidance scheme tries to keep the network at an optimal state. The instant at which a congestion control scheme is called, depends on the amount of memory available in the routers whereas, the point at which a congestion avoidance scheme is invoked, is independent of the memory size. A congestion avoidance scheme may continuously oscillate slightly around its goal without significant degradation in performance. However, the congestion control scheme tries to minimize the chances of going above the limit.
+
+
+ 
+
+As a network administrator, in your opinion, which of following technique will be more suitable for a WAN?
+
+Congestion Avoidance
+Congestion Control
+Justify your answer with at least 3 valid reasons.
+
+
+As, Knee is the point after which thoughput increases very slow and delay increase fast. While cliff is the point after which throughput starts to decrease very fast to zero and delay approches infinity. 
+Congestion control goal is to stay left of cliff i.e. avoid throughput to reach zero fastly. And Conestion avoidance goal is to stay left of knee i.e. increase throughput very slowly. 
+Based on this, my opinion for WAN would be to have a high priority of Congestion avaoidance, to get best out of the network. And have a low priority of congestion control (two-fold mechanism).
+For moderate or normal loads it will give an optimal throughput.
+In the worstcase where the load is much higher, congestion control should be activated to avoid congestion collapse.

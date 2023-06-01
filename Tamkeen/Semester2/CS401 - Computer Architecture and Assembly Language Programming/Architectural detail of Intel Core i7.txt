@@ -1,0 +1,4 @@
+http://download.intel.com/design/processor/datashts/320835.pdf
+
+NOTE:
+You would need to install Adobe Acrobat 10 or advance to view this document.
